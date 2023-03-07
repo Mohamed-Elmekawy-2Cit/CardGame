@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gira la carta</title>
+</head>
+<body>
+  <img id="card" onclick="gira()" src="retro.png" height="500">
+ <script>
+    let carta=document.querySelector("img")
+    let image = document.getElementById("card");
+      function gira() {
+        if (carta.src.includes("back"))
+          image.src = "fontr pokemon metagross.jpg";
+        else image.src = "retro.png";
+      }
+    
+    </script>
+</body>
+</html>

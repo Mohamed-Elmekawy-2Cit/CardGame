@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carte pokemon\\  </title>
+
+    <style>
+        img {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="tavoloDaGioco"></div>
+
+    <script>
+        carte = ["fronte.jpg", "fonte2.jpg", "fronte 3.jpg"]
+
+        tavolo = document.querySelector('#tavoloDaGioco')
+
+        carte.forEach(element => {
+            tavolo.innerHTML += '<img id="'+element+'" src="retro.png" onclick="gira(this)" />'
+            console.log('<img id="'+element+'" src="retro.png" />')
+        });
+
+        function gira(carta) {
+            console.log('GIRA')
+            console.log(carta.id)
+            if (carta.src.includes("retro"))
+                carta.src = carta.id
+            else
+                carta.src = "retro.png"
+        }
+
+    </script>
+</body>
+
+</html>
